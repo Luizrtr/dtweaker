@@ -5,3 +5,5 @@ The ideia is to make an overlay that can have many tools commonly used in a web 
 
 ## Initial phase
 Create an overlay that has a color picker menu
+
+## [GitKraken Board](https://app.gitkraken.com/glo/board/YK1_wbBtNAARxANY)
