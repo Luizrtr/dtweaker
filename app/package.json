@@ -1,0 +1,24 @@
+{
+  "name": "dtweaker",
+  "version": "1.0.0",
+  "description": "A project for fast tools made by devs for devs",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^13.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/biel-correa/dtweaker.git"
+  },
+  "author": "biel-correa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/biel-correa/dtweaker/issues"
+  },
+  "homepage": "https://github.com/biel-correa/dtweaker#readme"
+}
