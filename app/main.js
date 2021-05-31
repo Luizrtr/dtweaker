@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, globalShortcut } = require('electron')
 
 function createWindow () {
     const win = new BrowserWindow({
@@ -25,5 +25,10 @@ app.whenReady().then(() => {
   app.on('activate', function () {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
+})
+
+//auto focus when user press the shortcut
+app.on('ready', ()=>{
+  globalShortcut.register('CommandOrControl+l', app.focus)
 })
   
