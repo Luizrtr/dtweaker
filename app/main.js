@@ -7,13 +7,9 @@ function createWindow () {
     })
 
     win.setMenu(null)
-  
+    win.setSkipTaskbar(true)
     win.loadURL('http://localhost:3000')
 }
-  
-app.whenReady().then(() => {
-  createWindow()
-})
 
 app.on('window-all-closed', function () {
     if (process.platform !== 'darwin') app.quit()
@@ -21,14 +17,11 @@ app.on('window-all-closed', function () {
 
 app.whenReady().then(() => {
   createWindow()
+  
+  globalShortcut.register('CommandOrControl+l', app.focus)
 
   app.on('activate', function () {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
-})
-
-//auto focus when user press the shortcut
-app.on('ready', ()=>{
-  globalShortcut.register('CommandOrControl+l', app.focus)
 })
   
