@@ -1,4 +1,5 @@
 const { app, BrowserWindow, globalShortcut } = require('electron')
+const isDev = require('electron-is-dev');
 
 function createWindow () {
     const win = new BrowserWindow({
@@ -7,7 +8,9 @@ function createWindow () {
     })
 
     win.setMenu(null)
-    win.setSkipTaskbar(true)
+    if(!isDev){
+      win.setSkipTaskbar(true)
+    }
     win.loadURL('http://localhost:3000')
 }
 
